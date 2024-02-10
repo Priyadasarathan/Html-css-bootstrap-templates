@@ -1,0 +1,677 @@
+body{
+    font-family: "Poppins", Sans-serif;
+}
+.first{
+    background: rgb(250, 244, 244);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.first img{
+    margin-left: -4%;
+}
+.first a{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    margin-right: 2%;
+}
+.first .fa-phone-volume{
+    padding-right: 20px;
+    color: #EE3324;
+    font-weight: 600;
+    font-size: 20px;
+}
+@media only screen and (max-width: 740px){
+    .two .row  {
+        margin-bottom: 70%;
+    }
+    }
+@media only screen and (max-width: 740px){
+    .two .row .images {
+        position: relative;
+        left: 14%;
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 740px){
+    .first .container {
+        padding-left: 5%;
+    }
+}
+.two{
+    padding-bottom: 10%;
+}
+.two .images{
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom: -200%;
+    background-position: center;
+}
+.two .comtext{
+    margin-top: 5%;
+    margin-left: -10px;
+   
+}
+.two .comtext h1{
+    color: #0B1320;
+    font-size: 2.2em;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+.two .comtext ul{
+    list-style: none;
+    color: rgb(11, 19, 32);
+    font-size: 18px;
+    font-weight:400 ;
+    line-height:46px ;
+    margin-left: -4%;
+
+}
+.two .fa-check-circle{
+    background-image: linear-gradient(260deg,#FFF 0%,#EE3324 96%);
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    font-size: 25px;
+    text-shadow: 1px 0px 0px  rgb(238, 51, 36),
+                    2px 0px 0px  rgb(238, 51, 36),
+                    3px 0px 0px rgb(238, 51, 36),
+                    4px 0px 0px rgb(238, 51, 36),
+                    5px 0px 0px rgb(238, 51, 36);
+                 
+                
+}
+.two .comtext button{
+    background: #EE3324;
+    color: #fff!important;
+    font-size: 18px;
+    padding: 15px 40px;
+    margin: 10px 40px auto auto;
+}
+.two .comtext a{
+    font-size: 18px;
+    
+    color: rgb(245, 86, 75);
+   
+
+}
+.two .comtext .fa-lightbulb{
+    font-size: 40px;
+    font-weight:900 ;
+    margin-right: 5px;
+    
+    color: rgb(245, 86, 75);
+    
+
+}
+.two img{
+    width: 150%;
+    height: 100%;
+}
+.two .img1{
+ width: 200%;
+}
+.two .img2{
+    width: 200%;
+    margin-left: 70%;
+}
+@media only screen and (max-width: 740px){
+    .two .container{
+        padding-left: 5%;
+    }
+}
+.three{
+   
+    background: black;
+    color: white;
+    padding-bottom: 5%;
+    overflow: hidden;
+   
+}
+.three h2{
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 2em;
+    line-height: 45.36px;
+    text-align: center;
+}
+.three p{
+    font-size: 18px;
+    margin-top: 1.5em;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 6%;
+}
+.three img{
+    width: 35%;
+    padding-left: 30px;
+}
+
+.three .col-lg-3{
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    border-left: 1px solid #162d53 ;
+    
+    
+
+}
+@media only screen and (max-width: 740px){
+    .three .col-lg-3 {
+        width: 100%;
+        border-bottom: 1px solid #162d53;
+    }
+    .three img{
+        width: 20%;
+        
+    }
+}
+
+.three .fir{
+    border-bottom: 1px solid #162d53;
+  
+}
+.three h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: #fff;
+    line-height: 28px;
+    
+    
+}
+
+@media (min-width: 992px){
+.three .col-lg-3 {
+    flex: 0 0 25%;
+}
+}
+.four{
+    padding-top: 7%;
+    background: #fcf9f9;
+}
+.four h1{
+    text-align: center;
+    font-size: 32.4px;
+    font-weight: 600;
+    line-height: 45.36px;
+}
+.four h5{
+    text-align: center;
+    font-size: 18px;
+    font-weight:400 ;
+    line-height: 28.8px;
+    padding-bottom: 2%;
+}
+.four img{
+    width: 22%;
+    
+}
+.four .card{
+    border: none;
+    border-radius: 20px;
+    padding: 30px 30px;
+    height: 95%;
+    box-shadow:-5px 3px 19px 3px rgba(0, 0, 0, 0.1);
+    
+}
+.four h2{
+    margin-top: 15px;
+    font-size: 1.8em;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+}
+.four p{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28.8px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+}
+.four .card:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, .2);
+}
+
+.five{
+    padding-top: 7%;
+    background: #fcf9f9;
+    padding-bottom: 7%;
+}
+.five h1{
+    text-align: center;
+    font-size: 32.4px;
+    font-weight: 600;
+    line-height: 45.36px;
+}
+.five h5{
+    text-align: center;
+    font-size: 18px;
+    font-weight:400 ;
+    line-height: 28.8px;
+    padding-bottom: 2%;
+}
+.five img{
+    width: 22%;
+    
+}
+.five .card{
+    border: none;
+    border-radius: 25px;
+    padding: 20px 30px;
+    height: fit-content;
+    box-shadow:-5px 3px 19px 3px rgba(0, 0, 0, 0.1);
+    border-bottom-width: 4px !important;
+    border-bottom-color: rgb(238, 51, 36) !important;
+    border-bottom: 1px solid  rgb(238, 51, 36);
+   
+
+    
+}
+.five h2{
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+}
+.five p{
+    font-weight:400 ;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+}
+.five ul{
+    list-style: none;
+    color: black;
+    font-size: 18px;
+    font-weight:400;
+    margin-left: -30px;
+    line-height: 40.4px;
+
+}
+.five .fa-check-circle{
+    background-image: linear-gradient(260deg,#FFF 0%,#f11909 96%);
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+    text-shadow: 1px 0px 0px  rgb(238, 51, 36),
+                 2px 0px 0px  rgb(238, 51, 36),
+                 3px 0px 0px rgb(238, 51, 36),
+                 4px 0px 0px rgb(238, 51, 36),
+                 5px 0px 0px rgb(238, 51, 36);
+                 
+                 
+}
+@media only screen and (max-width: 740px){
+    .five .card {
+        margin-top: 10%;
+    }
+    }
+
+.six .container{
+    background: #4179ff12;
+    padding-top: 20px;
+    padding-bottom: -5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+}
+.six button{
+    background: #EE3324;
+    color: #fff!important;
+    padding: 15px 40px;
+    display: inline-block;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    border-radius: 5px;
+    padding: 14px 28px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    transition: all .5s;
+    font-weight: 200;
+}
+.six button:hover{
+    background: black;
+}
+
+.six p{
+    color: #0b1320;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+.seven {
+    background: #fcf9f9;
+}
+.seven h1{
+    
+    font-size: 1.8em;
+    margin-top: 1.8em;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 10%;
+    
+}
+
+.seven .container{
+    background: #fff1f2;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 80px;
+    border-radius: 15px;
+    
+    
+}
+.seven h6{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-top: 8%;
+    letter-spacing: .2px;
+    
+   
+}
+.seven .m{
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 15px 50px 30px;
+    background: white;
+    padding: 10px;
+    width: 100px;
+    height: 80px;
+    border: none;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, .3);
+}
+
+@media only screen and (max-width: 740px){
+    .seven .container{
+        
+        padding-left: 35%;
+    }  
+}
+
+.eight{
+    margin-top: 10%;
+}
+.eight .fa-mug-hot{
+    color: #ee3324;
+    font-size: 7em;
+    font-weight: 900;
+
+}
+.eight .sp1{
+    color:black;
+    font-size: 2em;
+    font-weight: 600;
+    padding-left: 10px;
+
+}
+.eight .para{
+    display: inline;
+    margin-right: 8px;
+    line-height: 1.6;
+    font-weight: 400;
+    font-size: 18px;
+}
+ 
+.eight .fa-mobile-alt{
+    font-size: 40px;
+    margin-top: 10%;
+    font-weight: 900;
+    border-right: 3px solid #162d53;
+    padding-right: 30px;
+}
+.eight .fa-paper-plane{
+    font-size: 40px;
+    margin-top: 10%;
+    font-weight: 900;
+    border-right: 3px solid #162d53;
+    padding-right: 30px;
+}
+.eight .fa-skype{
+    font-size: 40px;
+    margin-top: 10%;
+    font-weight: 900;
+    border-right: 3px solid #162d53;
+    padding-right: 30px;
+}
+.eight .p1{
+    margin-left: 16%;
+    font-size: 25px;
+    font-weight: 300;
+    color: #ee3324;
+    display: flex;
+
+    
+    
+}
+.eight .p2{
+    margin-left: 18%;
+    font-size: 25px;
+    font-weight: 300;
+    color: #ee3324;
+    display: flex;
+
+    
+}
+.eight .p3{
+    margin-left: 18%;
+    font-size: 25px;
+    font-weight: 200;
+    color: #ee3324;
+    display: flex;
+
+    
+}
+.eight b{
+    margin-left: 6%;
+    position: relative;
+    top: 50%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 18px;
+   
+}
+.eight .formcon{
+    box-sizing: border-box;
+    background-color: #e8effa;
+    border-radius: 20px;
+    padding-bottom: 7%;
+    
+}
+.formcon h2{
+    margin-top: 5%;
+}
+form label{
+    font-weight: 900;
+    font-size: 18px;
+}
+form .fa-star-of-life{
+    color: red;
+    padding-left: 0.2em;
+    font-size: 9px;
+}
+.eight input{
+    height: 45px;
+    border-radius: 5px;
+    background-color: #C9E1F9;
+    border-color: #A2C2E2;
+}
+.eight .com{
+    padding-left: 12px;
+    border-radius: 5px;
+    background-color: #C9E1F9;
+    border-color: #A2C2E2;
+}
+.eight form{
+    padding: 25px;
+}
+@media only screen and (max-width: 740px){
+    .eight .com {
+        width: 100%;
+    }  
+    .eight .btn{
+        width: 100%;
+    } 
+}
+form .btn{
+    background-color: #EE3324;
+    color: #ffffff;
+    padding-top: 20px;
+    padding-bottom: -10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+form .secure{
+    font-size: 80%;
+}
+form .btn:hover{
+    color: white;
+    background-color: black;
+}
+
+.nine{
+    margin-top: 6%;
+}
+.nine h1{
+    font-size: 2.5em;
+    line-height: 50px;
+    font-weight: 700;
+}
+.nine p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    color: #2A3C59;
+}
+.nine .container{
+    margin-top: 5%;
+}
+.nine .firstcol{
+    display: flex;
+    text-align: right;
+    
+}
+.nine .seccol{
+    display: flex;
+    text-align: right;
+    padding-right: 5%;
+}
+.nine .thirdcol{
+    display: flex;
+    text-align: right;
+}
+.nine .firstcol h5{
+    padding-top: 8%;
+}
+.nine .firstcol h3{
+    position: relative;
+    left: 7%;
+    color: #409c6d;
+    font-size: 63px;
+    font-weight: 200;
+    line-height: 100.8px;
+}
+.nine .firstcol small{
+    padding-top: 20%;
+    margin-left: -12%;
+    font-size: 20px;
+    color: #409c6d;
+}
+.nine .seccol h5{
+    padding-top: 8%;
+}
+.nine .seccol h3{
+    position: relative;
+    left: 7%;
+    color: #3351a4;
+    font-size: 63px;
+    font-weight: 200;
+    line-height: 100.8px;
+}
+.nine .thirdcol h5{
+    padding-top: 8%;
+}
+.nine .thirdcol h3{
+    position: relative;
+    left: 7%;
+    color: #f15b43;
+    font-size: 63px;
+    font-weight: 200;
+    line-height: 100.8px;
+}
+@media only screen and (max-width: 740px){
+    .nine .row {
+        width: 100%;
+        
+    }
+    .nine h3{
+        text-align: right;
+    }
+    .nine h5{
+        display: inline;
+        text-align: left;
+    }
+    .nine .firstcol small{
+        margin-top: -5%;
+        margin-left: 1px;
+    }
+}
+.ten{
+    background:#0B1320;
+    margin-top: 6%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+.ten h1{
+    color: white;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1.4;
+}
+.ten .pg{
+    text-align: center;
+    color: white;
+    margin-top: 2%;
+    font-size: 18px;
+    font-weight: 400;
+}
+.ten .btn{
+    background: #f6a931;
+    color: #0b1320;
+    font-size: 20px;
+    font-weight: 400;
+    min-width: 300px;
+    display: inline-block;
+    padding: 12px;
+    margin: 20px;
+}
+.ten a{
+    color: #f6a931;
+    font-size: 18px;
+    font-weight: 400;
+    opacity: .7;
+    text-decoration: underline;
+}
+@media only screen and (max-width: 740px){
+    .ten .btn {
+        width: 90%;
+        
+    }
+}
+

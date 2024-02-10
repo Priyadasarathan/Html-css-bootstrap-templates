@@ -1,0 +1,104 @@
+/*img{
+    width: 600px;
+    transition: 0.3s;
+}*/
+/*.slick-slide{
+    margin: 0 20px;
+}
+.slick-slide img{
+    width: 100%;
+}
+.slick-list{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slide-list:focus{
+    outline: none;
+}
+.slick-slide{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+.slick-slide img{
+    display: block;
+}
+.slick-initialized .slick-slide{
+    display: block;
+}
+.slick-loading .slick-slide{
+    visibility: hidden;
+}*/
+/* .three {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background: #f3f5fa;
+}
+.three img{
+    max-width: 45%;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    filter: grayscale(100);
+    text-align: center;
+}
+.three img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+
+} */
+
+.seven{
+    background-color: white;
+    padding-bottom: 5%;
+}
+.seven h5{
+    color:#E8B271;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+.seven h1{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+}
+.seven .card{
+    padding:50px 50px;
+    border: none;
+    
+    margin-top: 10px;
+    width: 470px;
+    height: 350px;
+}
+.seven .container-fliud{
+    margin-right: 3%;
+    margin-left: -1%;
+}
+.seven p{
+
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-align: center;
+
+}
+.seven .fa-star{
+    font-size: 15px;
+    color: orangered;
+    margin-top: 30px;
+    
+}
+.seven .text-muted{
+    margin-top: 10px;
+}
+.fff .swiper-pagination {
+   position: relative;
+   margin-top: -5%;
+}

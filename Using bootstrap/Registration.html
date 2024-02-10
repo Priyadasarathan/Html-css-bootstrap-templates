@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form for Authorselvi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400&family=Roboto:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link rel="stylesheet" href="regstyle.css">
+    
+</head>
+<body>
+   
+    <section class="container-fluid whole">
+        <div class="container mt-5 ">
+            <h1 class="text-center text-white ">Register Here!</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <!--form start-->
+                            <form action="insert.php" method="POST">
+                                <div class="row">
+                                    <div class="pt-5 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="name">First name</label>
+                                            <input type="text" name="username" class="form-control" required placeholder="Enter your First Name" id="name">
+                                        </div>
+                                    </div>
+                                    <div class=" pt-5 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="name">Second name</label>
+                                            <input type="text" 
+                                             class="form-control" required placeholder="Enter your Second Name" id="name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group pt-5">
+                                            <label for="mobile">Mobile no.</label>
+                                            <input type="number" name="mobile"  placeholder="+91 7867655213" id="mobile"
+                                            class="form-control"  required aria-describedby="phoneHelp">
+                                            <small id="phoneHelp" class="form-text text-muted">We won't share your number with anyone else!</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group pt-5">
+                                            <label for="Email">Email ID</label>
+                                            <input type="email" name="email"  placeholder="Enter your email ID" id="email"
+                                            class="form-control"  required aria-describedby="emailHelp">
+                                            <small id="emailHelp" class="form-text text-muted">We won't share your Email ID with anyone else!</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group pt-5">
+                                            <label for="password">Password</label>
+                                            <input type="password" name="password"  placeholder="Password" id="password"
+                                            class="form-control" required >
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group pt-5">
+                                            <label for="password">Confirm Password</label>
+                                            <input type="password" name="confirm_password"  placeholder="confirm password" id="confirm_password"
+                                            class="form-control" required >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="para"></div>
+                                <div class="form-group form-check pt-5">
+                                    <input type="checkbox" class="form-check-input mr-2 " required id="termsAgreement"
+                                    value="termsAgreement"/>
+                                    <span style="padding-left:10px"><label for="termsAgreement" class="form-check-label"> I agree to terms and conditions</label></span>
+                                    
+                                </div>
+
+                                <div class="form-group text-center mt-3">
+                                    <button type="reset" class="btn btn-secondary text-center">Reset</button>
+
+                                    
+                                    <button type="submit" class="btn btn-success">   <i class="fa fa-external-link mr-2"></i><span style="padding-left:10px;"><a href="login.html">Submit</button></span></a>
+                                </div>
+                                
+                            
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+</html>

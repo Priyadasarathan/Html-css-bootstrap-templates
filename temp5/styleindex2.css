@@ -1,0 +1,6 @@
+.card h5, h3, p{
+    max-width: 100%;
+}
+.card_slider{
+    padding: 50px 0;
+}

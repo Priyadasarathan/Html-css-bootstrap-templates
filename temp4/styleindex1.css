@@ -1,0 +1,253 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: montserrat;
+}
+
+nav{
+    background: #fff;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+label.logo{
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    
+    
+}
+nav ul{
+    float: right;
+    margin-right: 25%;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+ nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+ }
+
+a:hover{
+    background: #1b9bff;
+    transition: .5s;   
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:858px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100px;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+.img1{
+    position: relative;
+}
+
+.img1 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.img1-text{
+    position: absolute;
+    top: 25%;
+    color: black;
+    padding: 20px;
+}
+
+.img1-text h4{
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/*@import url('https://font.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700');
+body{
+    background: #3333;
+    font-family: 'Poppins',sans-serif;
+} */
+.cover{
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 900px;
+    height: 400px;
+    background: #000;
+    margin-top: 50px;
+    display: flex;
+}
+
+.img2{
+    margin: 10px;
+    width: 800px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.img2 img{
+    width: 300px;
+    height: 200px;
+}
+/*menu drop down*/
+ul li ul.dropdown1 li{
+    display: block;
+}
+ul li ul.dropdown1{
+    width: 100%;
+    background: #22438c;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+ul li a:hover{
+    background: #112c66;
+}
+ul li:hover ul.dropdown1{
+    display: block;
+}
+
+/*image hover 
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+.img3{
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.img3 img{
+        width: 100%;
+        height: 100%;
+}
+.content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+}
+.content:hover{
+    opacity: 1;
+}
+.content h2{
+    font-size: 42px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.content p{
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+}
+.content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+.content:hover > *{
+    transform: translateY(0px);
+}*/
+
+/*Again for 3 pic review*/
+.review{
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 900px;
+    height: 400px;
+    background: #000;
+    margin-top: 50px;
+    display: flex;
+}
+
+.img4{
+    margin: 10px;
+    width: 800px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+.img4 img{
+    width: 300px;
+    height: 200px;
+}

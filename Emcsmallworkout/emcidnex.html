@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script</title>
+    <link rel="stylesheet" href="emstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,100&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- <div class="navbar ">
+        <h1>Booksworld!</h1>
+    </div>
+    <div class="container">
+        <div class="book-container">
+            <h2>Let Her Go Out</h2>
+            <h5>Anbarasi</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi est neque ex eos repudiandae possimus corporis? Quaerat reiciendis sapiente alias corrupti eligendi numquam nulla consequuntur, consectetur minima quas ea doloremque.</p>
+            <button onclick="deletebook(event)">Delete</button>
+        </div>
+    </div>
+    <div class="popup-overlay"></div>
+
+    <div class="popup-box">
+        <h2 class="text-white">Add Book</h2>
+        <form>
+            <input type="text" id="book-title" placeholder="Book Title">
+            <input type="text" id="author" placeholder="Book Author">
+            <textarea placeholder="Short Description" id="book-description"></textarea>
+            <button id="add-book">ADD</button>
+            <button id="cancel-popup">CANCEL</button>
+        </form>  
+    </div>
+
+    <button class="add-button" id="add-popup-button">+</button> -->
+
+    <!-- <script>
+        var popupoverlay=document.querySelector(".popup-overlay");
+    var popupbox=document.querySelector(".popup-box");
+    var addpopupbutton=document.getElementById("add-popup-button");
+
+    addpopupbutton.addEventListener("click", function(){
+        popupoverlay.style.display="block"
+        popupbox.style.display="block"
+    });
+
+    //selecting cancel button
+    var cancelpopup = document.getElementById(".cancel-popup");
+    cancelpopup.addEventListener("click", function(event){
+        event.preventDefault()
+        // popupoverlay.style.display="none";
+        // popupbox.style.display="none";
+    });
+
+
+    //selecting container,booktitle, book author, book description
+    var container = document.querySelector(".container");
+    var addbook = document.getElementById("add-book");
+    var booktitleinput = document.getElementById("book-title");
+    var bookauthorinput = document.getElementById("author");
+    var bookdescriptioninput = document.getElementById("book-description");
+
+    addbook.addEventListener("click", function(event){
+        event.preventDefault()
+        var div = document.createElement("div")
+        div.setAttribute("class","book-container")
+        div.innerHTML=`<h2>${booktitleinput.value}</h2>`
+        container.append(div);
+    });
+
+    </script> -->
+    <h2 onclick="this.innerHTML='Ooops.....'">Click here!!!</h2>
+    <p id="demo"></p>
+    <input id="number">
+    <button type="button" onclick="submitted()">Submit</button>
+    <p id="demo1"></p>
+
+    <button type="button" onclick="displayDate()">show today date and time</button>
+    <p id="text1" class="mt-2"></p>
+    <div onmouseover="fun1(this)" onmouseout="fun2(this)">Welcome</div>
+
+    <button type="button" class="mybtn">Show Time, date and day</button>
+    <h4 class="show"></h4>
+
+    <button type="button" class="mybtn1 btn btn-danger">alert message</button><br><br>
+
+    <div><button type="button" class="mybtn2 btn btn-outline-warning">Two alert message in same button</button><br><br>
+    </div>
+
+    <button type="button" id="mybtn3">Multiple events</button><br>
+    <b>
+        <h6 id="demo3"></h6>
+    </b>
+
+    <button type="button" class="mybtn4 btn btn-outline-success">Calculation</button>
+    <p class="demo4"></p>
+
+    <div id="mydiv" class="bg-primary text-white p-5 text-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, minus aperiam provident molestiae
+            temporibus odio consequuntur laborum nemo iure ea id laboriosam repellat, in labore. Cumque aut non minus
+            vitae.</p>
+        <button id="remove" onclick="removehandler()">remove</button>
+    </div>
+    <p id="nummove" class="text-center"></p>
+
+    <button id="demo5" onmouseover="colorchange()">color change</button>
+
+    <p class="demo6"></p>
+    <p class="demo7"></p>
+    <h6 id="demo8"></h6>
+    <h6 id="demo9"></h6>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p class="demo12"></p>
+    <p class="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p class="demo17"></p>
+    <p class="demo18"></p>
+    <p id="demo19"></p>
+    <p id="demo20"></p>
+    <div class="bg-success p-3">
+        <h4>type of sentance</h4>
+        <textarea placeholder="Short Description" id="desc"></textarea>
+        <button id="btn2" onclick="findlength()">word of length</button>
+        <p id="demo21"></p>
+    </div>
+    <p id="demo22"></p>
+
+    <div class="bg-warning p-3">
+        <h5>Find the Rate of months</h5>
+        <input id="input">
+        <button id="btn3" onclick="findrate()">Find Rate</button>
+        <p id="demo23"></p>
+    </div>
+
+    <div class="bg-danger p-3 text-center m-5">
+        <h5>check its palindrome or not</h5>
+        <input id="inputpali">
+        <button id="btn4" onclick="findpali()">check it here!</button>
+        <p id="demo24"></p>
+    </div>
+
+    <div class="wrapper bg-success p-5 text-center m-5">
+        <h5>Select a city</h5>
+        <select id="select" class="p-1">
+            <option value="Bangalore">Bangalore</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Vellore">Vellore</option>
+            <option value="Rameshvaram">Rameshvaram</option>
+            <option value="Goa">Goa</option>
+        </select><br>
+        <button id="btn5" class="mt-3 p-2">show the details of state </button>
+    </div>
+
+    <div class="wholewrap12 text-center">
+        <h4>Color change</h4>
+        <h4 id="colortext"></h4>
+        <div id="wrap">
+            <button id="clickchange">click here! to color change</button>
+        </div>
+    </div>
+    <!-- 
+    <p id="demo26"></p> -->
+
+    <select id="branch" class="m-5">
+        <option value="select">select Name</option>
+    </select>
+
+    <div class="container">
+        <div id="wrappertime">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="mins">00</span>
+            <span>:</span>
+            <span id="second">00</span>
+            <span id="ampm">AM</span>
+        </div>
+    </div>
+
+    <div class="container-fliud text-center mt-5 p-5">
+        <h3>Convert different countries of currency</h3>
+        <div class="selections">
+            <select id="country1">
+
+            </select>
+
+            <select id="country1">
+
+            </select>
+        </div>
+        <div class="inputs p-3">
+            <input id="input20" type="number" name="value" class="p-2">
+            <input id="result20" type="number" name="value" class="p-2">
+        </div>
+        <button id="btn6" class="p-2">Convert</button>
+
+    </div>
+    <p id="demo27"></p>
+
+
+    <div class="container1 text-center">
+        <div class="stopwatch">
+            <img src="https://play-lh.googleusercontent.com/aFt3AiVt7r-Op0LoKomONLdRIPgkNSeL_XcS-7VCyppe2rZBsS_DlI8ihYPgafOr2TQ"
+                width="80px">
+            <p>Stop Watch</p>
+            <div id="result">
+                <span id="hourr">00 : </span>
+                <span id="minutee">00 : </span>
+                <span id="secondd">00 </span>
+            </div>
+            <div id="btn7">
+                <button onclick="my_object.started()"><i class="fa-solid fa-play me-2"></i>Start</button>
+                <button onclick="my_object.stoped()"><i class="fa-solid fa-pause me-2"></i>Stop</button>
+                <button onclick="my_object.reset()"><i class="fa-solid fa-arrows-rotate me-2"></i>Reset</button>
+            </div>
+        </div>
+    </div>
+    <h4>Access to Top Talent</h4>
+    <h3>Access to Top Talent</h3>
+
+    <!--animation-->
+    <div class="animate">
+        <div data-aos="fade-up"> ANIMATION-1</div>
+        <div data-aos="slide-left"> ANIMATION-2</div>
+        <div data-aos="slide-right"> ANIMATION-3</div>
+        <div data-aos="zoom-out-down"> ANIMATION-4</div>
+        <div data-aos="flip-left"> ANIMATION-5</div>
+    </div>
+
+    <!-- Calculator program -->
+    <div class="calc text-center p-5">
+        <form class="p-3">
+            <h1>Calculator</h1>
+            <label>number1</label>
+            <input id="num1" placeholder="first value">
+            <label>number2</label>
+            <input id="num2" placeholder="second value">
+        </form>
+        <div class="btnwhole">
+            <button class="btn" onclick="add()">+</button>
+            <button class="btn" onclick="sub()">-</button>
+            <button class="btn" onclick="multi()">*</button>
+            <button class="btn" onclick="divition()">/</button>
+            <button class="btn" onclick="madu()">%</button>
+        </div>
+        <h5 id="result10"></h5>
+    </div>
+
+    <div class="stoptime text-center p-5">
+        <p>Stop Clock</p>
+        <div id="result11">
+            <span id="h">00 : </span>
+            <span id="m">00 : </span>
+            <span id="s">00 </span>
+        </div>
+        <div id="btn11">
+            <button onclick="my_objects.startt()">Start</button>
+            <button onclick="my_objects.stopp()">Stop</button>
+            <button onclick="my_objects.resett()">Reset</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- Age calculation -->
+    <div class="p-5">
+        <h3>Age calculation</h3>
+        <input type="text" id="showdate" maxlength="2" minlength="1" placeholder="Date">
+        <input type="text" id="showmonth" maxlength="2" minlength="1" placeholder="Month">
+        <input type="text" id="showyear" maxlength="4" minlength="4" placeholder="Year">
+        <button type="submit" id="btn12" onclick="agecalc()">submit</button>
+        <h5 id="result12" class="p-3"></h5>
+    </div>
+
+    <!-- shown data and information -->
+    <div class="text-center shown">
+        <button type="submit" class="text-center p-2" onclick="shown()">Comrade data and information</button>
+        <p id="shown" class="text-center"></p>
+    </div>
+
+    <!-- array change -->
+    <div class="">
+        <p id="arraychange" onclick="shownarray()">Array strings change to Array numbers</p>
+    </div>
+
+    <!-- Proper Calculation -->
+    <div class="contain">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="output-screen">
+            <button onclick="Clear()">Clear</button>
+            <button onclick="del()">Del</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="calculate()" class="equal">=</button>
+        </div>
+    </div>
+
+    <!-- Age calculation from frontend forever -->
+    <div class="Agecontainer">
+        <div class="Agecontainer1">
+            <input type="datetime-local" id="dob" class="p-1">
+            <button id="submitage" class="p-1">Calculate Age</button>
+            <p id="year"></p>
+            <p id="month"></p>
+            <p id="week"></p>
+            <p id="day"></p>
+            <p id="hourage"></p>
+            <p id="minage"></p>
+            <p id="secage"></p>
+        </div>
+    </div>
+
+    <!-- send message using html and css -->
+    <div class="wholesend">
+        <form method="post" action="mailto:priyadasarathan0506@gmail.com">
+            <h3>Send message</h3><br>
+            <label>Name</label><br>
+            <input type="text"><br>
+            <label>Email</label><br>
+            <input type="email"><br>
+            <label>Address</label><br>
+            <textarea rows="4"></textarea><br>
+            <button type="submit" value="send" class="mt-3">send</button>
+        </form>
+    </div>
+
+    <!-- clicking radios -->
+    <div class="text-center">
+        <h5>Clicking Radio</h5>
+        <input type="radio" name="clicking" class="m-2">1
+        <input type="radio" name="clicking" class="m-2">2
+        <input type="radio" name="clicking" class="m-2">3<br><br>
+        <button id="btn13" class="p-2" onclick="clickingradios()"> Click me</button><br>
+        <h5 id="clickradios"></h5><br><br>
+    </div>
+
+    <script>
+
+        // Clicking radios
+        var btn13 = document.getElementById("btn13");
+        var clickradios = document.getElementById("clickradios");
+        function clickingradios() {
+            var allradios = document.getElementsByName("")
+        }
+
+        // Age calculation from frontend forever 
+        document.querySelector("#submitage").addEventListener("click", function () {
+            const update = function () { //another function into same function
+                let dob = document.querySelector("#dob").value,
+                    day = new Date(dob), //day from input value
+                    time = day.getTime(), //time from day of value
+                    today = new Date(),  //today from your system
+                    timenow = today.getTime(), //time from today of system
+                    value = timenow - time,
+                    secage = Math.floor(value / 1000),
+                    minage = Math.floor(value / (1000 * 60)),
+                    hourage = Math.floor(value / (1000 * 60 * 60)),
+                    days = Math.floor(value / (1000 * 60 * 60 * 24)),
+                    week = Math.floor(value / (1000 * 60 * 60 * 24 * 7)),
+                    month = Math.floor(value / (1000 * 60 * 60 * 24 * 30.4375)),
+                    year = Math.floor(value / (1000 * 60 * 60 * 24 * 365.25));
+
+                let insert = function (x, y) {
+                    document.querySelector(x).innerHTML = y;
+                }
+                insert("#year", year + "-years");
+                insert("#month", month + "-months");
+                insert("#week", week + "-week");
+                insert("#day", days + "-days");
+                insert("#hourage", hourage + "-hours");
+                insert("#minage", minage + "-minutes");
+                insert("#secage", secage + "-seconds");
+            }
+            setInterval(update, 1000);
+
+        })
+
+        //perfect calculator
+        let outputscreen = document.getElementById("output-screen");
+        function display(num) {
+            outputscreen.value += num;
+        }
+        function calculate() {
+            try {
+                outputscreen.value = eval(outputscreen.value); //eval default calc method
+            }
+            catch {
+                alert("Invalid Input");
+            }
+        }
+        function Clear() {  //Clear -C must be capsletter
+            outputscreen.value = "";
+        }
+        function del() {
+            outputscreen.value = outputscreen.value.slice(0, -1);//slice default method
+        }
+
+        //array change
+        function shownarray() {
+            arraycreate = [1, "**", 2, "**", 3, "**", 4, "**", 5, "**", 6, "**", 7, "**", 8, "**", 9, "**", 0];
+            document.getElementById("arraychange").innerHTML = arraycreate;
+        }
+
+        // shown datas and info
+        function shown() {
+            comradeName = "Akil <br>";
+            comradeAge = "25 <br>";
+            comradeAddress = "Chennai <br>";
+            comradeProfession = "Planting a tree <br>";
+            comradeAim = "Getting a WORLD RECORD <br>";
+            var details = document.getElementById("shown").innerHTML = "Name: " + comradeName + "Age: " + comradeAge + "Address: " + comradeAddress + "Profession: " + comradeProfession + "Aim: " + comradeAim;
+            // details.display = block;
+        }
+        // function shown(){
+        //     // details.display = none;
+        // }
+
+        function agecalc() {
+            var showdate1 = Number(document.getElementById("showdate").value);
+            var showmonth1 = Number(document.getElementById("showmonth").value);
+            var showyear1 = Number(document.getElementById("showyear").value);
+            var showdatetime = new Date();
+            var showdate2 = showdatetime.getDate();
+            var showmonth2 = showdatetime.getMonth();
+            var showyear2 = showdatetime.getFullYear();
+            var date3 = 365 - showdate1;
+            var month3 = showmonth2 - showmonth1;
+            var year3 = showyear2 - showyear1;
+            document.getElementById("result12").innerHTML = "Your age is " + year3 + " years old " + month3 + " months and Remainder days for you " + date3 + " days.";
+        }
+        // //Age calculation
+        // function agecalc() {
+        //     var showdate1 = Number(document.getElementById("showdate").value);
+        //     var showmonth1 = Number(document.getElementById("showmonth").value);
+        //     var showyear1 = Number(document.getElementById("showyear").value);
+        //     var showdatetime = new Date();
+        //     // document.getElementById("result12").innerHTML = showdatetime;
+        //     var showdate2 = showdatetime.getDate();
+        //     var showmonth2 = 1+ showdatetime.getMonth();//1 + showdatetime.getMonth();
+        //     var showyear2 = showdatetime.getFullYear();
+        //     var fullmonth = [31,28,31,30,31,30,31,31,30,31,30,31];
+        //     if(showdate1>showdate2){
+        //         showdate2 = showdate2 + fullmonth[showmonth2 - 1];
+        //         showmonth2 = showmonth2 - 1;
+        //     }
+        //     if(showmonth1>showmonth2){
+        //         showmonth2 = showmonth2 + 2;
+        //         showyear2 = showyear2 - 1;
+        //     }
+        //     var day3 = showdate2 - showdate1;
+        //     var month3 = showmonth2 - showmonth1;
+        //     var year3 = showyear2 - showyear1;
+        //     document.getElementById("result12").innerHTML = "Your age is "+ year3 + " years old " + month3 + " month and  "+ day3 + " days.";
+        // }
+
+        //stoping clock
+        var hh, mm, ss, my_intt; //variable declared
+        var getthh = 0, gettmm = 0, gettss = 0; //initialize variable
+        function clock() {
+            this.startt = function () { //create object
+                hh = document.getElementById("h");
+                mm = document.getElementById("m");
+                ss = document.getElementById("s");
+                if (gettss >= 0) {
+                    gettss++;
+                    ss.innerHTML = gettss;
+                }
+                if (gettss < 10) {
+                    ss.innerHTML = "0" + gettss;
+                }
+                if (gettss >= 60) {
+                    gettss = 0;
+                    gettmm++;
+                    mm.innerHTML = gettmm + " :";
+                }
+                if (gettmm < 10) {
+                    mm.innerHTML = "0" + gettmm + " :";
+                }
+                if (gettmm >= 60) {
+                    gettmm = 0;
+                    getthh++;
+                    hh.innerHTML = getthh;
+                }
+                if (getthh < 10) {
+                    hh.innerHTML = "0" + getthh + " :";
+                }
+                my_intt = setTimeout(my_objects.startt, 1000);
+            }
+            this.stopp = function () {
+                my_intt = clearTimeout(my_intt);
+            }
+            this.resett = function () {
+                if (gettss >= 0) {
+                    gettss = 0;
+                    gettmm = 0;
+                    getthh = 0;
+                    ss.innerHTML = "0" + gettss;
+                    mm.innerHTML = "0" + gettmm + " :";
+                    hh.innerHTML = "0" + getthh + " :";
+                    clearTimeout(my_intt);
+                }
+            }
+        }
+        var my_objects = new clock();//using many objects in this stopwatch function so we can access the object using the my_object variable.
+
+
+        // Calculator let month = Number(document.getElementById("input").value);
+
+        function add() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            let adding = number1 + number2;
+            document.getElementById("result10").innerHTML = "Result = " + adding;
+        }
+        function sub() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            let subtract = number1 - number2;
+            document.getElementById("result10").innerHTML = "Result = " + subtract;
+        }
+        function multi() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            let multiple = number1 * number2;
+            document.getElementById("result10").innerHTML = "Result = " + multiple;
+        }
+        function divition() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            let divi = number1 / number2;
+            document.getElementById("result10").innerHTML = "Result = " + divi;
+        }
+        function madu() {
+            let number1 = Number(document.getElementById("num1").value);
+            let number2 = Number(document.getElementById("num2").value);
+            let madulus = number1 % number2;
+            document.getElementById("result10").innerHTML = "Result = " + madulus;
+        }
+
+        var hourr, minutee, secondd, my_int; //variable declared
+        var gethourr = 0, getminn = 0, getsecc = 0; //initialize variable
+        function stopwatch() {
+            this.started = function () { //create object
+                hourr = document.getElementById("hourr");
+                minutee = document.getElementById("minutee");
+                secondd = document.getElementById("secondd");
+                if (getsecc >= 0) {
+                    getsecc++;
+                    secondd.innerHTML = getsecc;
+                }
+                if (getsecc < 10) {
+                    secondd.innerHTML = "0" + getsecc;
+                }
+                if (getsecc >= 60) {
+                    getsecc = 0;
+                    getminn++;
+                    minutee.innerHTML = getminn + " :";
+                }
+                if (getminn < 10) {
+                    minutee.innerHTML = "0" + getminn + " :";
+                }
+                if (getminn >= 60) {
+                    getminn = 0;
+                    gethourr++;
+                    hourr.innerHTML = gethourr;
+                }
+                if (gethourr < 10) {
+                    gethourr.innerHTML = "0" + gethourr + " :";
+                }
+                my_int = setTimeout(my_object.started, 1000);
+            }
+            this.stoped = function () {
+                my_int = clearTimeout(my_int);
+            }
+            this.reset = function () {
+                if (getsecc >= 0) {
+                    getsecc = 0;
+                    getminn = 0;
+                    gethourr = 0;
+                    secondd.innerHTML = "0" + getsecc;
+                    minutee.innerHTML = "0" + getminn + " :";
+                    hourr.innerHTML = "0" + gethourr + " :";
+                    clearTimeout(my_int);
+                }
+            }
+        }
+        var my_object = new stopwatch();//using many objects in this stopwatch function so we can access the object using the my_object variable.
+
+
+        let select = document.querySelectorAll("#country1");
+        let btn6 = document.getElementById("btn6");
+        // let input = document.getElementById("input").value;
+        fetch('https://api.frankfurter.app/currencies')
+            .then(res => res.json())
+            .then(res => displaydropdown(res))
+        function displaydropdown(res) {
+            let curr = Object.entries(res) //given array list
+            // console.log(curr);
+            // return false;
+            for (i = 0; i < curr.length; i++) {
+                let opt = `<option value="${curr[i][0]}">${curr[i][0]}</option>`
+                select[0].innerHTML += opt; //all those things shown its called concatination
+                select[1].innerHTML += opt;
+
+            }
+        }
+       
+        btn6.addEventListener('click', () => {
+            let input = document.getElementById("input20");
+            let curr1 = select[0].value
+            let curr2 = select[1].value
+            let inputVal = input.value
+            if (curr1 === curr2)
+                alert('choose different countries');
+            else
+                convert(curr1, curr2, inputVal)
+        });
+        function convert(curr1, curr2, inputVal) {
+            const host = 'api.frankfurter.app';
+            fetch(`https://${host}/latest?amount=${inputVal}&from=${curr1}&to=${curr2}`)
+                .then(resp => resp.json())
+                .then((data) => {
+                    console.log(data)
+                    document.getElementById("result20").value = Object.values(data.rates)[0];
+                });
+        }
+
+
+        function displayTime() {
+            let dateTime = new Date();
+            let hr = dateTime.getHours()
+            let min = dateTime.getMinutes()
+            let sec = dateTime.getSeconds()
+            if (hr > 12) {
+                hr = hr - 12
+                document.getElementById("ampm").innerHTML = 'PM';
+            }
+            document.getElementById("hours").innerHTML = addzero(hr);
+            document.getElementById("mins").innerHTML = addzero(min);
+            document.getElementById("second").innerHTML = addzero(sec);
+        }
+        function addzero(num) {
+            return num < 10 ? "0" + num : num;
+        }
+        setInterval(displayTime, 500);
+        // let valume = (l,b,h) =>{return l*b*h }
+        // console.log(valume(7,2,3))
+        array9 = ['Akil', 'Divya', 'Fayas', 'Monisha', 'Riyas']
+        array9.forEach(val => {
+            const opt = document.createElement("option");
+            opt.textContent = val;
+            opt.value = val;
+            document.getElementById("branch").appendChild(opt);
+        })
+
+        var colortext = document.getElementById("colortext");
+        var wrap = document.getElementById("wrap");
+        var clickchange = document.getElementById("clickchange");
+        var hexacolors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+        function randomvalues() {
+            let randomindex = Math.floor(Math.random() * 16);
+            return hexacolors[randomindex]
+        }
+        clickchange.addEventListener('click', function () {
+            let hexacolor = '#';
+            for (let i = 1; i <= 6; i++) {
+                hexacolor += randomvalues()
+
+            }
+            // console.log(hexacolor)
+            wrap.style.backgroundColor = hexacolor;
+            colortext.innerHTML = hexacolor;
+        })
+
+        var details = document.getElementById("btn5");
+        details.addEventListener('click', selected);
+        let resultdiv = document.createElement('div');
+        resultdiv.id = "demo25";
+        document.querySelector(".wrapper").appendChild(resultdiv);
+        function selected() {
+            var select = document.getElementById("select")
+            var citydetails = select.options[select.selectedIndex].value;
+            place = '';
+            pincode = 0;
+            switch (citydetails) {
+                case 'Bangalore':
+                    place = 'gorden of city';
+                    pincode = 658958;
+                    break;
+                case 'Chennai':
+                    place = 'parries corner';
+                    pincode = 634564;
+                    break;
+                case 'Vellore':
+                    place = 'Vellore fort';
+                    pincode = 632520;
+                    break;
+                case 'Rameshvaram':
+                    place = 'Dhanushkodi';
+                    pincode = 606203;
+                    break;
+                case 'Goa':
+                    place = 'beach';
+                    pincode = 579876;
+                    break;
+            }
+            let text4 = `This city of ${citydetails},<br>here famous place is ${place},<br>pincode: ${pincode},<br> Thank you!!`;
+            document.getElementById("demo25").innerHTML = text4;
+        }
+
+        function findpali() {
+            let givenstring = document.getElementById("inputpali").value;
+            let reversestring = givenstring.reverse;
+            console.log(givenstring);
+            if (givenstring == reversestring) {
+                document.getElementById("demo24").innerHTML = givenstring + " : this string is palindrome ";
+            }
+            else {
+                document.getElementById("demo24").innerHTML = givenstring + " : its not a palindrome ";
+            }
+        }
+
+        //<3 month - 5.8%
+        //3-6 month - 6.5%
+        //7-9 month - 6.8%
+        //>=10 month - 7%      
+        function findrate() {
+            let month = Number(document.getElementById("input").value);
+            rate = 0;
+            if (month < 3) {
+                rate = 5.8
+            }
+            else if (month >= 3 && month <= 6) {
+                rate = 6.5
+            }
+            else if (month >= 7 && month <= 9) {
+                rate = 6.8
+            }
+            else {
+                rate = 7
+            }
+            document.getElementById("demo23").innerHTML = "Your month rate is " + rate + "%";
+        }
+
+        age = 25
+        gender = "female"
+        if (age > 20 && gender == "female") {
+            document.getElementById("demo22").innerHTML = "your eligible for getting offer";
+        }
+        else {
+            document.getElementById("demo22").innerHTML = "your not eligible for any offer";
+        }
+
+        // let array6 = document.getElementById("desc");
+        // let array7 = array6.textContent;
+        // let length = array7.length;
+        function findlength() {
+            let array6 = document.getElementById("desc").value;
+            document.getElementById("demo21").innerHTML = array6.length;
+        }
+
+        let hello3 = value => "Great" + " " + value;
+        document.getElementById("demo20").innerHTML = hello3("Pleasure");
+
+        let hello2 = (val) => "worth" + " " + val; //arrows function using parameters
+        document.getElementById("demo19").innerHTML = hello2("Universe");
+
+        let hello1 = () => "Welcome js";
+        document.querySelector(".demo18").innerHTML = hello1();
+
+        let hello = "";
+        hello = () => {
+            return "hello world"
+        }
+        document.querySelector(".demo17").innerHTML = hello();
+
+        //usage of arrow function
+        let function5 = (a, b) => a * b; //reduce the function code
+        document.getElementById("demo16").innerHTML = function5(5, 7);
+        //create an object
+        const person4 = {
+            firstname: "bulttu",
+            secondname: "mahi",
+            age: 4,
+            fullName: function () {
+                return this.firstname + " " + this.secondname; //this key word pointout the object of person
+            }
+        }
+        document.getElementById("demo15").innerHTML = person4.fullName();
+
+        function person3(first, second, age, eye) { //constructor
+            this.firstName = first;
+            this.secondName = second;
+            this.age = age;
+            this.eyecolor = eye;
+        };
+        //create object
+        const myperson3 = new person3("harsha", "varun", 23, "black");
+        document.getElementById("demo14").innerHTML = "myperson3 eye color is " + myperson3.eyecolor;
+
+        function parameters(x, y) {//passing the parameters
+            return x + y;
+        }
+        document.querySelector(".demo13").innerHTML = parameters(150, 200);
+
+
+        const map = new Map([  // getting the key values of objects using map
+            ['mango', 500,],
+            ['orange', 100,],
+            ['apple', 1000]
+        ]);
+        document.querySelector(".demo12").innerHTML = map.get("apple");
+
+        const array2 = ['priya', 'Akil', 'surya', 'harsha'];// merge two or more array collections
+        const array3 = ['santhosh', 'ram', 'yogi'];
+        const array4 = ['mohan', 'jack',];
+        var merge = array2.concat(array3, array4);
+        document.getElementById("demo11").innerHTML = merge;
+
+        let Array1 = ['graphs', 'apple', 'pomogranet', 'banana', 'jack'];  //between some symbols
+        document.getElementById("demo10").innerHTML = Array1.join("*");
+        document.getElementById("demo10").innerHTML = Array1.pop(); //pop the values
+        document.getElementById("demo10").innerHTML = Array1.push("orange");// push the values
+
+        var points1 = new Array(14, 13, 28);
+        document.getElementById("demo9").innerHTML = points1[2];// getting the particular values using array index
+        document.getElementById("demo9").innerHTML = typeof points1;//which types
+
+        const points = [13, 28, 14, 17, 3, 10, 8];
+        document.getElementById("demo8").innerHTML = points;
+        const fruits = ['graphs', 'apple', 'pomogranet', 'banana', 'jack'];//knew the array length and size
+        let size = fruits.length;
+        document.querySelector(".demo7").innerHTML = size;
+        document.querySelector(".demo7").innerHTML = fruits[0];
+
+        const phone = ['realme', 28, 'samsung', 'redme', 'apple']; //insert the values using array index
+        phone[2] = "iphone";
+        document.querySelector(".demo6").innerHTML = phone;
+
+        function colorchange() {
+            const myCollection = document.getElementsByTagName("p"); //change the color using tag name
+            for (let i = 0; i < myCollection.length; i++)
+                myCollection[i].style.color = "purple";
+        }
+
+        document.getElementById("mydiv").addEventListener("mousemove", nummove);
+        function nummove() {
+            document.getElementById("nummove").innerHTML = Math.random();
+        }
+        function removehandler() {
+            document.getElementById("mydiv").removeEventListener("mousemove", nummove);
+        }
+
+
+        let num1 = 10;
+        let num2 = 20;
+        document.querySelector(".mybtn4").addEventListener("mouseover", function () {
+            calculation(num1, num2)
+        })
+        function calculation(a1, b1) {
+            document.querySelector(".demo4").innerHTML = a1 * b1;
+        }
+
+        var Multiple = document.getElementById("mybtn3");
+        Multiple.addEventListener("click", clicked);
+        Multiple.addEventListener("mouseover", mouseovered);
+        Multiple.addEventListener("mouseout", mouseouted);
+        function clicked() {
+            document.getElementById("demo3").innerHTML += 'clicked!!! <br>';
+        }
+        function mouseovered() {
+            document.getElementById("demo3").innerHTML += 'mouseovered!!! <br>';
+        }
+        function mouseouted() {
+            document.getElementById("demo3").innerHTML += 'mouseouted!!! <br>';
+        }
+
+        // var click = document.querySelector(".mybtn2");
+        // click = addEventListener("click",function3);
+        // click = addEventListener("click",function4);
+        // function function3(){
+        //     alert("first click");
+        // }
+        // function function4(){
+        //     alert("second click");
+        // }
+
+        document.querySelector(".mybtn1").addEventListener("mouseover", function () {
+            alert("welcome javascript");
+        });
+
+        document.querySelector(".mybtn").addEventListener("click", displayDate);
+        function displayDate() {
+            document.querySelector(".show").innerHTML = Date();
+        }
+        function fun1(text2) {
+            text2.innerHTML = "Thank you";
+        }
+        function fun2(text3) {
+            text3.innerHTML = "for visit";
+        }
+        function displayDate() {
+            document.getElementById("text1").innerHTML = Date();
+        }
+        function submitted() {
+            let numb = document.getElementById("number").value;
+            let text;
+            if (isNaN(numb) || numb < 1 || numb > 10) {
+                text = "Invalid number";
+            }
+            else {
+                text = "Input correct";
+            }
+            document.getElementById('demo1').innerHTML = text;
+
+        }
+        // const person1 = {
+        //     fill: function(){
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // const person2 = {
+        //     firstName : "welocme",
+        //     lastName : "js"
+
+        // }
+        // document.getElementById('demo').innerHTML=(person1.fill.apply(person2));
+        const person = {
+            firstName: "welcome",
+            lastName: "html",
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const member = {
+            firstName: "welcome",
+            lastName: "css"
+        }
+        let fullName = person.fullName.bind(member)
+        document.getElementById('demo').innerHTML = fullName();
+        document.getElementById('demo').innerHTML = "new one";
+
+        //backtick
+        let name = "Akil";
+        let city = "chennai";
+        let address = "33 kovil street";
+        console.log(`${name}, ${city}, ${address}`);
+
+        //arrays
+        let array5 = [[4, 5, 6], [1, 2, 3], [8, 9, 6]];
+        console.log(array5[1][1]);
+
+        let namee = 'Akil';
+        let msg = "yes! " + namee + " your the comrade of the world!, what a man your are!!!!!";
+        // alert(msg);
+
+
+        let person5 = {
+            name1: 'Akil',
+            age: 24,
+            gender: 'male',
+            proffessional: 'comrade of world',
+            siblings: {
+                sister: 'Divya'
+            }
+        }
+        console.log(person5.name1);
+        console.log(person5.siblings.sister);
+
+        function person6(profession) {
+            name2 = "akil";
+            age = 24;
+            console.log("Hi I am " + name2 + " my age " + age + " years old " + profession + " of the world")
+        }
+        person6("dear comrade");
+
+        for (i = 0; i <= 10; i++) {
+            //  if(i%3==0)
+            // continue
+            console.log(i)
+        }
+
+        let valume = (l, b, h) => { return l * b * h }
+        console.log(valume(7, 2, 3))
+
+        array7 = [1, 2, 3, 4, 5]
+        let sumofarray = array7 => {
+            let sum = 0
+            for (let val of array7) {
+                sum += val
+            }
+            return sum;
+        }
+        console.log(sumofarray(array7))
+
+        array8 = ['Akil', 'divya', 'nayas', 'monisha', 'riyas']
+        array8.forEach(print) //print is call back function
+        function print(val) {
+            console.log(val.toUpperCase())
+        }
+        // array10 = ['AKIL', 'FAYAS', 'MONISHA', 'PRIYA', 'DIVYA']
+        // array10.forEach(fav)
+        // function fav(names) {
+        //     document.getElementById("demo27").innerHTML = names.toLowerCase();
+        //     // console.log(names.toLowerCase())
+        //     // favv.innerHTML = names;
+        // }
+        // let favv = document.getElementById("demo27");
+
+
+        // Varible assign
+        var stateBank = 100;
+        atm1 = stateBank - 20;
+        document.write("First : ", atm1);
+        document.write("<br>");
+        stateBank = atm1;
+        atm2 = stateBank - 40;
+        document.write("Second : ", atm2);
+        document.write("<br>");
+        stateBank = atm2;
+        atm3 = stateBank - 10;
+        document.write("Third : ", atm3);
+        stateBank = atm3;  //last variable will be shown 
+        document.write("<br>");
+        document.write("total balance : ", stateBank);
+        document.write("<br>");
+        document.write("<br>");
+
+        //switch case
+        var floor = 3;
+        switch (floor = 2) { // alter code for switch(floor) only variable specification
+            case 1:
+                document.write("1st floor");
+                break; //break will work main thing
+            case 2:
+                document.write("2nd floor");
+                break;
+                document.write("<br>");
+            case 3:
+                document.write("3rd floor");
+                break;
+                document.write("<br>");
+            case 4:
+                document.write("4th floor");
+                break;
+                document.write("<br>");
+            case 5:
+                document.write("5th floor");
+                break;
+                document.write("<br>");
+            default:
+                document.write("No floor in this number" + floor);
+        }
+        document.write("<br>");
+        document.write("<br>");
+
+        //for loop
+        for (i = 1; i <= 5; i++) {
+            document.write(i);
+            document.write("<br>");
+        }
+        //while loop
+        i = 1;
+        while (i <= 3) {
+            document.write(i, ' ');
+            i++;
+        }
+        //do while
+        i = 1;
+        do {
+            document.write(i);
+            i++;
+
+        } while (i <= 0);
+        document.write("<br>");
+
+        //function
+        function Biriyani(order) {
+            document.write("I want ", order);
+            document.write("<br>");
+        }
+        Biriyani("Veg Biriyani");
+        Biriyani("bucket Mutton biriyani");
+        Biriyani("chicken", "mutton Biriyani")
+        document.write("<br>");
+
+        //Objects
+        var car = {
+            brand: "Mahendra",
+            color: "Green",
+            mileage: 90,
+            capacity: 5
+        }
+        document.write(car.color);
+        document.write(car['mileage']);
+        document.write("<br>");
+
+        //array
+        var arr = ['Akil', 'yogi', 'riyas', 'surya'];
+        var arrsize = arr.length;
+        document.write(arr);
+        document.write("<br>");
+        document.write(arrsize);
+        document.write("<br>");
+        arr[2] = 'santhosh';
+        document.write(arr);
+        document.write("<br>");
+        for (i = 0; i < arrsize; i++) {
+            document.write(arr[i]);
+            document.write("<br>");
+        }
+        var array_of_numbers = [13, 14, 3, 1];
+        document.write(array_of_numbers);
+
+    </script>
+    <input type="radio" name="gender" value="female">female
+    <input type="radio" name="gender" value="male">male
+    <button onclick="clc()">click</button>
+
+    <script>
+        function clc() {
+            var check = document.querySelector('input[name="gender"]:checked');
+            if (check != null) {
+                alert('the select value is ' + check.value);
+            }
+        }
+    </script>
+    <!-- <button onclick="clc()">click</button>
+<script>
+    function clc(){
+        alert("hii");
+    }
+</script> -->
+
+    <!-- <script src="emcdom.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

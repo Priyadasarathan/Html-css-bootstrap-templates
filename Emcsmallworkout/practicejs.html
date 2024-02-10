@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- let var const difference -->
+    <script>
+        let a = 10;
+        function myfun1() {
+            a = 9
+            console.log(a, 'for using let')
+        }
+        myfun1();
+        const b = 20;
+        function myfun2() {
+            console.log(b, 'for using const');
+        }
+        myfun2();
+    </script>
+
+    <!-- data types and type casting  convert number into a string-->
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        document.getElementById('demo1').innerHTML = Number(Math.PI);
+        let y = "5";
+        let x = + y;
+        document.getElementById("demo2").innerHTML = typeof y + "<br>" + typeof x;
+        let date = new Date();
+        let time = date.getTime();
+        document.getElementById('demo3').innerHTML = date;
+        document.getElementById('demo4').innerHTML = time;
+    </script>
+
+
+    <!-- callback function -->
+    <div>
+        <h3>Using callback function</h3>
+        <h4> the calculation number is: <span id="demo5"></span></h4>
+    </div>
+    <script>
+        function mydisplay(something) {
+            document.getElementById("demo5").innerHTML = something;
+        }
+        function mycalc(num1, num2, mycallback) {
+            let x = num1;
+            let y = num2;
+            let sum = x + y;
+            mycallback(sum);
+        }
+        mycalc(15, 5, mydisplay);
+    </script>
+
+    <!-- Arrow function its default return statement -->
+    <h4>Arrow function : <span id="demo6"></span></h4>
+    <h4>Arrow function passing arguments : <span id="demo7"></span></h4>
+    <script>
+        let myfun3 = (a, b) => a * b;
+        document.getElementById("demo6").innerHTML = myfun3(5, 10);
+        let myfun4 = "";
+        myfun4 = (val1, val2) => 'hello' + ' ' + val1 + ' ' + val2;
+        document.getElementById("demo7").innerHTML = myfun4('Universe', 'welcome');
+    </script>
+
+    <!-- this keyword join two strings -->
+    <h3>Using this keyword</h3>
+    <p id="demo8"></p>
+    <script>
+        const object1 = {
+            fullname: function () {
+                return this.firstname + ' ' + this.lastname;
+            }
+        }
+        const object2 = {
+            firstname: 'priya',
+            lastname: 'dasa'
+        }
+        let join = object1.fullname.call(object2);
+        document.getElementById('demo8').innerHTML = join;
+    </script>
+    <!-- difference between null and undefined -->
+    <script>
+        var undefinedvalue;
+        console.log(undefinedvalue);
+        var nullvalue = null;
+        console.log(nullvalue);
+    </script>
+    <button id="btn1">Click Me!</button>
+    <p id="demo9"></p>
+    <script>
+        let hello = "";
+
+        hello = () => {
+            document.getElementById("demo9").innerHTML += this;
+        }
+        //The window object calls the function:
+        window.addEventListener("load", hello);
+        //A button object calls the function:
+        document.getElementById("btn1").addEventListener("click", hello);
+    </script>
+
+    <!-- Array methods -->
+    <h3>Array methods </h3>
+    <p id="demo10"></p>
+    <script>
+        let array1 = ['Akil', 'Ram', 'Priya', 'Durga', 'Inba', 'Ragul', 'vaidhi', 'mush', 'abi', 'jana'];
+        document.write(array1); //its also toString() methods
+        document.write("<br>");
+        document.write(array1.length);
+        document.write("<br>");
+        let arrayjoin = array1.join("*");
+        document.write(arrayjoin);
+        document.write("<br>");
+        let arraypop = array1.pop();
+        document.write('Array pop method : ', arraypop);
+        document.write("<br>");
+        let arraypush = array1.push("sneka");
+        document.write('Array push method : ', array1);
+        document.write("<br>");
+        let arrayshift = array1.shift();
+        document.write('Array shift method : ', arrayshift);
+        document.write("<br>");
+        let arrayunshift = array1.unshift('kalpu');
+        document.write('Array unshift method : ', arrayunshift);
+        document.write("<br>");
+        array1[0] = 'kaviya';
+        document.write('Array adding elements : ', array1);
+        document.write("<br>");
+        delete array1[0];
+        document.write('Array delete elements : ', array1);
+        document.write("<br>");
+        document.write("<br>");
+        let array2 = [23, 21, 14, 1, 17, 18, 3, 28, 11, 26];
+        document.write('Two array concat : ', array1.concat(array2));
+        document.write("<br>");
+        let array3 = [[1, 2], [3, 4], [5, 6]];
+        document.write('dimantionally array flat : ', array3.flat());
+        document.write("<br>");
+        let arrayslice = array1.slice(4, 6);
+        document.write('Array slice : ', arrayslice);
+        document.write("<br>");
+        let arraysplice = array1.splice(2, 8);
+        document.write('Array splice : ', arraysplice);
+    </script>
+
+    <!-- Exception handling try catch throw and finally -->
+    <h3>Exception Handling</h3>
+    <script>
+        try {
+            allert("Exception handling");
+        }
+        catch (error) {
+            document.write(error.message);
+            document.write("<br>");
+        }
+        finally {
+            document.write('check manually');
+        }
+    </script>
+    <p>Try catch throw</p>
+    <p>Enter the number between 10 to 50</p>
+    <input id="demo11" type="text">
+    <button onclick="myfun5()">Test input</button>
+    <p id="demo12"></p>
+    <script>
+        function myfun5() {
+            let messageshow = document.getElementById('demo12');
+            messageshow.innerHTML = "correct input";
+            let inputstore = document.getElementById('demo11').value;
+            try {
+                if (inputstore.trim() == "") throw "empty";
+                if (isNaN(inputstore)) throw " not a number";
+                if (inputstore <= 10) throw "too low";
+                if (inputstore >= 50) throw "too high";
+            }
+            catch (error) {
+                // console.log(error,'error throw');
+                messageshow.innerHTML = 'Input is ' + error;
+            }
+        }
+    </script>
+
+    <!-- modules (Import and Export) -->
+    <h3>Modules (Import and Export)</h3>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <script type="module">
+        import { name, age } from "./emcdom.js";
+        let msgshow1 = "my name is " + name + " I am " + age + " years old. ";
+        document.getElementById("demo13").innerHTML = msgshow1;
+        import message from "./emcdom.js";
+        document.getElementById("demo14").innerHTML = message();
+    </script>
+
+    <!-- String manipulation and template litral(``)  -->
+    <h3>String manipulation</h3>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <script>
+        let string1 = "abcdefghijklmnopqrstuvwxyz";
+        document.getElementById("demo15").innerHTML = string1;
+        let stringlength = string1.length;
+        document.write(stringlength);
+        document.write("<br>");
+        let string2 = "Akil, Ram, Priya, Durga, Inba, Ragul, vaidhi, mush, abi";
+        document.write(string2);
+        document.write("<br>");
+        let stringslice = string2.slice(5, 9);
+        document.write(stringslice);
+        document.write("<br>");
+        let stringsub = string2.substr(5);
+        document.write(stringsub);
+        document.write("<br>");
+        let stringreplace = string2.replace('vaidhi', 'Yuva');
+        document.write(stringreplace);
+        document.write("<br>");
+        let stringuppercase = string2.toUpperCase();
+        document.write(stringuppercase);
+        document.write("<br>");
+        let string3 = "         Hi    Bye     welcome     ";
+        document.write(string3.trim());
+        document.write("<br>");
+        document.write(string2.split(""));
+        let name3 = 'java';
+        let name4 = 'script';
+        // let templatelitral = `welcome ${name3},${name4}!`;
+        // document.getElementById('demo16').innerHTML = templatelitral;
+    </script>
+
+    <!-- Asynchronous programming (Promise, async await) -->
+    <h3>Asynchronous programming (Promise, async await)</h3>
+    <h3 id="demo17"></h3>
+    <script>
+        function myfun6() {
+            document.getElementById('demo17').innerHTML = "setInterval.....";
+        }
+
+        let set = setInterval(myfun6, 3000);
+        clearInterval(set);
+
+        document.write("<br>");
+    </script>
+    <h3 id="demo18"></h3>
+    <script>
+        function myfun7(passvalue) {
+            document.getElementById("demo18").innerHTML = passvalue;
+        }
+        setInterval(function () { myfun7("passing value interval.........."); }, 3000);
+    </script>
+    <h3 id="demo19"></h3>
+    <script>
+        function myfun8() {
+            let currentdate = new Date();
+            document.getElementById('demo19').innerHTML = currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+        }
+        setInterval(myfun8, 1000);
+    </script>
+
+    <h3>.......Promise.......</h3>
+    Promise syntax<br>
+    let mypromise = new Promise(function(myResolve, myReject){<br>
+    <!-- producing code take some time -->
+    myResolve();//when success<br>
+    myReject();//when failure or error
+    });<br>
+    mypromise.then(<br>
+    function(value){code if success},<br>
+    function(error){code if some error}<br>
+    );
+    <br>
+    <br>
+    <input id="demo21" type="text">
+    <button onclick="myfun9()">submit</button>
+    <h3 id="demo20"></h3>
+    <script>
+        let mypromise1 = new Promise(function (myResolve, myReject) {
+            let inputpromise = document.getElementById("demo21").value;
+            // inputpromise = 6;
+            if (inputpromise > 50) {
+                myResolve("correct");
+            }
+            else {
+                myReject("error");
+            }
+
+        });
+        mypromise1.then(function (value) {
+            myfun9(value);
+        }).catch(function (error) {
+            myfun9(error);
+        });
+
+        function myfun9(promisepassing) {
+            document.getElementById("demo20").innerHTML = promisepassing;
+        }
+        // console.log(promisepassing);
+    </script>
+    <h3>Using Async </h3>
+    <!-- dont need to assign for resolve and reject message -->
+    <p id="demo22"></p>
+    <script>
+        async function myfun10() {
+            try {
+                let res = await mypromise1;
+                let res1 = await mypromise1;
+                let res2 = await mypromise1;
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+        myfun10().then(
+            function (value) { myfun11(value); },
+            function (error) { myfun11(error); }
+        )
+        function myfun11(something1) {
+            document.getElementById("demo22").innerHTML = something1;
+        }
+    </script>
+
+    <h3>Await</h3>
+    <p id="demo23"></p>
+    <script>
+        async function myfun12() {
+            let mypromise2 = new Promise(function (resolve, reject) {
+                resolve("welcome js");
+            })
+            document.getElementById("demo23").innerHTML = await mypromise2;
+        }
+        myfun12();
+    </script>
+    <h3>fetch api call (GET, POST)</h3>
+    <div class="container-fliud text-center mt-5 p-5">
+        <h3>Convert different countries of currency</h3>
+        <div class="selections">
+            <select id="country1">
+
+            </select>
+            <select id="country2">
+
+            </select>
+        </div>
+        <div class="inputs p-3">
+            <input id="input20" type="number" name="value" class="p-2">
+            <input id="result20" type="number" name="value" class="p-2">
+        </div>
+        <button id="btn6" class="">Convert</button>
+
+    </div>
+    <script>
+        let btn6 = document.getElementById("btn6");
+        // fetch('https://api.frankfurter.app/currencies')
+        //     // .then(res => res.json())
+        //     // .then(res => displaydropdown(res))
+        //     // .catch(e => {
+        //     //     console.log(e)
+        //     // });
+        async function getCurrencies() {
+            try {
+                const res = await fetch('https://api.frankfurter.app/currencies');
+                const json = await res.json();
+                displaydropdown(json);
+            } catch (e) {
+                console.log(e)
+            }
+        }
+        getCurrencies();
+
+
+
+        function displaydropdown(res) {
+            console.log("Res", res);
+            // let curr = Object.entries(res) //given array list
+
+            let countryOpt = '';
+            for (let key in res) {
+                countryOpt += `<option value="${key}">${key}</option>`
+            }
+            document.querySelector("#country1").innerHTML = countryOpt;
+            document.querySelector("#country2").innerHTML = countryOpt;
+            // console.log(curr);
+            // return false
+        }
+
+        btn6.addEventListener('click', () => {
+            let input = document.getElementById("input20");
+            let curr1 = document.querySelector("#country1").value
+            let curr2 = document.querySelector("#country2").value
+            let inputVal = input.value
+            if (curr1 === curr2)
+                alert('choose different countries');
+            else
+                convert(curr1, curr2, inputVal)
+        });
+
+        async function convert(curr1, curr2, inputVal) {
+            try {
+                const host = 'api.frankfurter.app';
+                const fetchhh = await fetch(`https://${host}/latest?amount=${inputVal}&from=${curr1}&to=${curr2}`,{
+                    method:'POST',
+                    body: JSON.stringify({test:'priya'})
+                });
+                const resp = await fetchhh.json();
+                document.getElementById("result20").value = resp?.rates?.[curr2] ?? '';
+            } catch (e) {
+                console.log(e);
+
+            }
+        }
+
+        // function convert(curr1, curr2, inputVal) {
+        //     const host = 'api.frankfurter.app';
+        //     fetch(`https://${host}/latest?amount=${inputVal}&from=${curr1}&to=${curr2}`)
+        //         .then(resp => resp.json())
+        //         .then((data) => {
+        //             // console.log(data)
+        //             document.getElementById("result20").value = Object.values(data.rates)[0];
+        //         });
+        // }
+        // async function getCurrencies(){
+        //     try{
+        //         const res= await fetch('https://api.frankfurter.app/currencies');
+        //         const json = await res.json();
+        //         displaydropdown(json);
+        //     }catch(e){
+        //         console.log(e)
+        //     }
+        // }
+        // getCurrencies();
+    </script>
+
+    <!-- DOM Event and event listener -->
+    <h3>DOM Event and event listener </h3>
+    <p onclick="click1()">click here to change the content</p>
+    <p id="demo28" onclick="click1()">click here to change the content</p>
+    <input id="demo29">
+    <button type="button" onclick="submitted()">Submit</button>
+    <p id="demo30"></p>
+    <button type="button" class="mybtn" onclick="displayDate()">show today date and time</button>
+    <p id="text1" class="mt-2 show"></p>
+    <div onmouseover="fun1(this)" onmouseout="fun2(this)">Welcome</div>
+    <button type="button" class="mybtn5 ">alert message</button><br><br>
+
+    <div><button type="button" class="mybtn6">Two alert message in same button</button><br><br>
+    </div>
+    <button type="button" id="mybtn6">Multiple events</button><br>
+    <h6 id="demo31"></h6>
+    <button type="button" class="mybtn7 ">Calculation</button>
+    <p class="demo32"></p>
+
+    <script>
+        function click1() {
+            document.getElementById("demo28").innerHTML = "changed..";
+        }
+        function submitted() {
+            let numb = document.getElementById("demo29").value;
+            let text;
+            if (isNaN(numb) || numb < 1 || numb > 10) {
+                text = "Invalid number";
+            }
+            else {
+                text = "Input is correct";
+            }
+            document.getElementById('demo30').innerHTML = text;
+        }
+        document.querySelector(".mybtn").addEventListener("click", displayDate);
+        function displayDate() {
+            document.querySelector(".show").innerHTML = Date();
+        }
+        function fun1(text2) {
+            text2.innerHTML = "Thank you";
+        }
+        function fun2(text3) {
+            text3.innerHTML = "for visit";
+        }
+
+        document.querySelector(".mybtn5").addEventListener("mouseover", function () {
+            alert("Learning javascript");
+        });
+
+        // let click = document.querySelector(".mybtn5");
+        // click = addEventListener("click",function3);
+        // click = addEventListener("click",function4);
+        // function function3(){
+        //     alert("first click");
+        // }
+        // function function4(){
+        //     alert("second click");
+        // }
+        let Multiple = document.getElementById("mybtn6");
+        // console.log(Multiple);
+        Multiple.addEventListener("click", clicked);
+        Multiple.addEventListener("mouseover", mouseovered);
+        Multiple.addEventListener("mouseout", mouseouted);
+        function clicked() {
+            document.getElementById("demo31").innerHTML += 'clicked!!! <br>';
+        }
+        function mouseovered() {
+            document.getElementById("demo31").innerHTML += 'mouseovered!!! <br>';
+        }
+        function mouseouted() {
+            document.getElementById("demo31").innerHTML += 'mouseouted!!! <br>';
+        }
+        let num1 = 10;
+        let num2 = 20;
+        document.querySelector(".mybtn7").addEventListener("mouseover", function () {
+            calculation(num1, num2)
+        })
+        function calculation(a1, b1) {
+            document.querySelector(".demo32").innerHTML = a1 * b1;
+        }
+    </script>
+
+    <!-- event propagation & delegation, bubbling, stopPropogation -->
+    <h3>event propagation & delegation, bubbling, stopPropogation</h3>
+    <div id="div1">
+        Component 1
+        <div id="div2">
+            component 2
+            <div id="div3">
+                component 3
+            </div>
+        </div>
+    </div>
+    <p id="demo33"></p>
+
+    <!-- event bubbling -->
+    <!-- Its bottom to top -->
+    <script>
+        let div1 = document.querySelector("#div1");
+        let div2 = document.querySelector("#div2");
+        let div3 = document.querySelector("#div3");
+
+        div1.addEventListener("click", function (event) {
+            alert("Component 1 event clicked");
+        });
+
+        div2.addEventListener("click", function (event) {
+            alert("Component 2 event clicked");
+        });
+
+        div3.addEventListener("click", function (event) {
+            alert("Component 3 event clicked");
+        }); 
+    </script>
+
+    <div id="div4">
+        Component 1
+        <div id="div5">
+            component 2
+            <div id="div6">
+                component 3
+            </div>
+        </div>
+    </div>
+
+    <!--  event capturing -->
+    <!-- Its top to bottom -->
+    <script>
+        let div4 = document.querySelector("#div4");
+        let div5 = document.querySelector("#div5");
+        let div6 = document.querySelector("#div6");
+        div4.addEventListener("click", function (event) {
+            alert("Component 1 event clicked");
+        }, true);
+
+        div5.addEventListener("click", function (event) {
+            alert("Component 2 event clicked");
+        }, true);
+
+        div6.addEventListener("click", function (event) {
+            alert("Component 3 event clicked");
+        }, true); 
+    </script>
+    <div id="menu">
+        <button data-action="save">Save</button>
+        <button data-action="load">Load</button>
+        <button data-action="search">Search</button>
+    </div>
+    <script>
+        class Menu {
+            constructor(elem) {
+                this._elem = elem;
+                elem.onclick = this.onClick.bind(this); // binding all this element
+            }
+
+            save() {
+                alert('saving');
+            }
+
+            load() {
+                alert('loading');
+            }
+
+            search() {
+                alert('searching');
+            }
+
+            onClick(event) {
+                let action = event.target.dataset.action;
+                if (action) {
+                    this[action]();
+                }
+            };
+        }
+        new Menu(menu);
+    </script>
+    <h3>The stopPropagation() Method</h3>
+
+    <p>Click DIV 1:</p>
+    <div onclick="func2()">DIV 2
+        <div onclick="func1(event)">DIV 1</div>
+    </div>
+
+    Stop propagation:
+    <input type="checkbox" id="check">
+    <script>
+        function func1(event) {
+            alert("DIV 1");
+            if (document.getElementById("check").checked) {
+                event.stopPropagation();
+            }
+        }
+        function func2() {
+            alert("DIV 2");
+        }
+    </script>
+
+    <!-- Class and Methods -->
+    <h3>Class and Methods</h3>
+    <p>This way passing a argue into way of method</p>
+    <p id="demo34"></p>
+    <script>
+        class Car {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            age(age) {  //create method
+                return age - this.year;
+            }
+        }
+        let datenew = new Date();
+        let getyear = datenew.getFullYear();
+        let myCar = new Car('priya', '2001');
+        console.log(myCar);
+        document.getElementById('demo34').innerHTML = "my car is " + myCar.age(getyear) + " years old";
+    </script>
+
+    <p id="demo35"></p>
+    <script>
+        class Fav {
+            constructor(myname) {
+                this.myname = myname;
+            }
+            age(passingage) {
+                return passingage;
+            }
+        }
+        let myFav = new Fav('priya');
+        // console.log(myFav.myname);
+        document.getElementById("demo35").innerHTML = `name is ${myFav.myname} her age is ${myFav.age(21)}`;
+        document.getElementById("demo35").innerHTML = "name is " + myFav.myname + " my age is " + myFav.age(21);
+    </script>
+    <br>
+    <!-- create todo list -->
+    <div class="todo_list">
+        <div class="todo_list1">
+            <h4 class="">Create todo list</h4>
+            <input type="text" id="todo_input">
+            <span onclick="myelement()" class="todo_add">Add</span>
+        </div>
+
+
+        <ul id="todo_ul">
+            <li>anushr</li>
+            <li>Sathya</li>
+            <li>Diiviya</li>
+            <li>keerth</li>
+            <li>Saraya</li>
+            <li>Kaviya</li>
+        </ul>
+        <script>
+            //create a close element and append for each element item
+            let mytodolist = document.getElementsByTagName("li");
+
+            //local storage,cookies
+            let todos = [];
+            window.onload = () => {
+                todos = JSON.parse(localStorage.getItem('todos')) || []
+                todos.forEach(todo => addtodo(todo))
+            }
+            let i;
+            for (i = 0; i < mytodolist.length; i++) {
+                let createspan = document.createElement("span");
+                let createclosetext = document.createTextNode("\u00D7");
+                createspan.className = "close";
+                localStorage.setItem('todos', JSON.stringify(todos))
+                createspan.appendChild(createclosetext);
+                mytodolist[i].appendChild(createspan);
+            }
+            //click on close button hide the current list item
+            let clickclose = document.getElementsByClassName("close");
+            let ii;
+            for (ii = 0; ii < clickclose.length; ii++) {
+                clickclose[ii].onclick = function () {
+                    let getparent = this.parentElement;
+                    getparent.style.display = "none";
+                }
+            }
+            //Add a checked symbol when click the item
+            let checklist = document.querySelector("ul");
+            checklist.addEventListener("click", function (event) {
+                if (event.target.tagName === "li") {
+                    event.target.classList.toggle('checked');
+                }
+            }, false);
+            //create a new function to add the list item 
+            function myelement() {
+                let create_li = document.createElement('li');
+                let get_input = document.getElementById("todo_input").value;
+                let create_get_input = document.createTextNode(get_input);
+                create_li.appendChild(create_get_input);
+                if (get_input === '') {
+                    alert("please enter something");
+                } else {
+                    document.getElementById("todo_ul").appendChild(create_li);
+                    localStorage.setItem('todos', JSON.stringify(todos))
+                }
+                document.getElementById("todo_input").value = "";
+                let createspan = document.createElement("span");
+                let createclosetext = document.createTextNode("\u00D7");
+                localStorage.setItem('todos', JSON.stringify(todos))
+                createspan.className = "close";
+                createspan.appendChild(createclosetext);
+                create_li.appendChild(createspan);
+                //click on close button hide the current list item
+                // let clickclose = document.getElementsByClassName("close");
+                // let ii;
+                for (ii = 0; ii < clickclose.length; ii++) {
+                    clickclose[ii].onclick = function () {
+                        let getparent = this.parentElement;
+                        getparent.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </div>
+    <!-- rest operator -->
+    <p id="demo36"></p>
+    <script>
+        function restfunction(a,...args) {
+            let sum = 0;
+            for (let arg of args) sum += arg;//sum=sum+arg
+            return sum;
+        }
+        let restdeclared = restfunction(5, 6, 7, 8, 3, 22, 344);
+        document.getElementById("demo36").innerHTML = "the sum of array elements: " + restdeclared;
+    </script>
+
+    <!-- spread operator -->
+    <p id="demo38"></p>
+    <script>
+        array4 = ['mohan', 'subash', 'ram', 'kavitha'];
+        array5 = ['divya', 'kaviya', 'arthi', 'sandhya'];
+        array6 = [...array4, 'anu', ...array5, 'kishore'];
+        console.log(array6);
+        document.getElementById("demo38").innerHTML = 'spread operator concat two arrays' + array6;
+    </script>
+    <p id="demo37"></p>
+    <script>
+        myVehicle = {
+            brand: 'Ford',
+            model: 'Mustang',
+            color: 'red'
+        }
+        updateMyVehicle = {
+            type: 'car',
+            year: 2021,
+            color: 'yellow'
+        }
+        const { type:type2, year, color} = updateMyVehicle;        
+        
+        let twoobjectconcat = { ...myVehicle, ...updateMyVehicle, dob: 22 };
+        console.log(twoobjectconcat);
+        document.getElementById("demo37").innerText = Object.values(myVehicle);
+    </script>
+
+    <!-- mapping in array method -->
+    <p id="demo39"></p>
+    <script>
+        let mapnumber1 = [4, 7, 5, 0];
+        document.getElementById("demo39").innerText = mapnumber1.map(Math.sqrt);
+        // document.getElementById("demo39").innerText = mapnumber1.map(function(val, idx){
+        
+        // });
+
+
+    </script>
+    <p id="demo40"></p>
+    <script>
+        let mapnumber2 = [10, 4, 30, 56];
+        let mapstore = mapnumber2.map(mapfunction);
+        document.getElementById("demo40").innerHTML = mapstore;
+        function mapfunction(mapnum) {
+            return mapnum * 10;
+        }
+    </script>
+    <p id="demo41"></p>
+    <script>
+        array7 = [
+            { firstname1: 'priya', lastname1: 'dasa' },
+            { firstname1: 'ram', lastname1: 'kumar' },
+            { firstname1: 'dhine', lastname1: 'dop' }
+        ];
+        document.getElementById("demo41").innerHTML = array7.map(mapfunction1);
+        function mapfunction1(mapitem) {
+            return [mapitem.firstname1, mapitem.lastname1].join(" ");
+        }
+    </script>
+
+    <!-- Filter method in array -->  
+    <p id="demo42"></p>
+    <script>
+        let filterarray = [4, 5, 67, 86, 21, 34, 55, 6, 8, 19];
+        document.getElementById("demo42").innerHTML = filterarray.filter(filterfunction);
+        function filterfunction(age) {
+            return age > 18;
+        }
+    </script>
+
+    <input type="text" id="filterinput">
+    <button id="filtertest" onclick="filterclick()">filter test</button>
+    <p id="demo43"></p>
+    <script>
+        let filterarray1 = [34, 65, 23, 44];
+
+        function checkfilter(checking) {
+            if (checking) {
+                return checking > document.getElementById("filterinput").value;
+            } else {
+                //    document.getElementById("demo43").innerHTML = "Its too long";
+                // return checking = "its too long";
+                // return "its too long";
+            }
+        }
+        function filterclick() {
+            document.getElementById("demo43").innerHTML = filterarray1.filter(checkfilter);
+        }
+    </script>
+    <!-- find method -->
+    <p id="demo44"></p>
+    <script>
+        let findarray = [4, 5, 67, 86, 21, 34, 55, 6, 8, 19];
+        document.getElementById("demo44").innerHTML = findarray.find(findfunction);
+        function findfunction(findage) {
+            return findage > 10;
+        }
+    </script>
+    <!-- every method -->
+    <p id="demo45"></p>
+    <script>
+        const ages = [32, 33, 16, 40];
+        document.getElementById("demo45").innerHTML = ages.every(checkAge);
+        function checkAge(age) {
+            return age > 5;
+        }
+    </script>
+    <!-- reduce method -->
+    <p id="demo46"></p>
+    <script>
+        const reducenumber = [175, 50, 25];
+        document.getElementById("demo46").innerHTML = reducenumber.reduce(reducefunction,0);
+        function reducefunction(total, num) {
+            return total - num;
+        }
+    </script>
+    <p id="demo47"></p>
+    <script>
+        const numbers = [15.5, 2.3, 1.1, 4.7];
+
+        document.getElementById("demo47").innerHTML = numbers.reduce(getSum, 0);
+
+        function getSum(total, num) {
+            return total + Math.round(num);
+        }
+    </script>
+    <!-- some method -->
+
+    <p id="demo48"></p>
+    <script>
+        const someages = [3, 10, 18, 20];
+        document.getElementById("demo48").innerHTML = 'greater than some values in array: ' + someages.some(somefunction);
+
+        function somefunction(age) {
+            return age > 186;
+        }
+    </script>
+    Input: <input type="number" id="toCheck">
+    <button onclick="myFunction()">Test</button>
+    <p>Values higher: <span id="demo49"></span></p>
+    <script>
+        const numberss = [4, 12, 16, 20];
+
+        function checkValue(getsome) {
+            return getsome > document.getElementById("toCheck").value;
+        }
+        function myFunction() {
+            document.getElementById("demo49").innerHTML = numberss.some(checkValue);
+        }
+    </script>
+    <!-- sort method -->
+    <p id="demo50"></p>
+    <script>
+        const sortfruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo50").innerHTML = sortfruits.sort();
+    </script>
+    <p id="demo51"></p>
+    <script>
+        const points1 = [40, 100, 1, 5, 25, 10, 6];
+        points1.sort(function (a, b) { return a - b });
+        document.getElementById("demo51").innerHTML = 'sorting order: ' + points1;
+    </script>
+    <p id="demo52"></p>
+    <script>
+        const points2 = [40, 100, 1, 5, 25, 10, 6];
+        points2.sort(function (a, b) { return b - a });
+        document.getElementById("demo52").innerHTML = 'ascending sorting order: ' + points2;
+    </script>
+    <p id="demo53"></p>
+    <script>
+        const points3 = [40, 100, 1, 5, 25, 10, 6];
+        points3.sort(function (a, b) { return a - b });
+        document.getElementById("demo53").innerHTML = ' least position: ' + points3[0];
+    </script>
+    <p id="demo54"></p>
+    <script>
+        const points4 = [40, 100, 1, 5, 25, 10, 6];
+        points4.sort(function (a, b) { return b - a });
+        document.getElementById("demo54").innerHTML = ' high position: ' + points4[0];
+    </script>
+    <p id="demo55"></p>
+    <script>
+        const points5 = [40, 600, 100, 1, 5, 25, 10];
+        // Sort the numbers in ascending order:
+        points5.sort(function (a, b) { return a - b });
+        // points[0] is now the highest value:
+        document.getElementById("demo55").innerHTML = 'get last position: ' + points5[points5.length - 1];
+    </script>
+
+    <p id="demo56"></p>
+    <script>
+        const person = { fname: "priya", lname: "dasa", age: 22 };
+        let txt = "";
+        for (let x in person) {
+            txt += person[x] + " ";
+        }
+        document.getElementById("demo56").innerHTML = txt;
+    </script>
+    <p id="demo57"></p>
+    <p id="demo58"></p>
+    <script>
+        const person1 = ['kavitha','durga','arthi','kerthana','anushya'];
+        const personvalue = person1.values();
+        let text1 ="";
+        for (let x of personvalue){
+            text1 += x + "<br>";
+        }
+        document.getElementById("demo57").innerHTML = text1;
+        // document.getElementById("demo58").innerText = "text" + text1;
+    </script>
+
+    <!-- local storage -->
+    <button type="button" onclick="clickCounter()">click here to value increase</button>
+    <p id="demo59"></p>
+    <script>
+        clickCounter();
+        function clickCounter(){
+            if(localStorage.clickCount){
+                localStorage.clickCount=Number(localStorage.clickCount)+1;
+            }
+            else{
+                localStorage.clickCount = 1;
+            }
+            document.getElementById("demo59").innerText=localStorage.clickCount;
+        }
+        // let getnumbers = localStorage.getItem(localStorage.clickCount);
+        // console.log(getnumbers);
+    </script>
+
+    <!-- create Loader -->
+    <div class="loader"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <style>
+        .todo_list {
+            background-color: rgb(119, 209, 202);
+            padding-bottom: 10px;
+        }
+
+        .todo_list1 {
+            margin-left: 36%;
+            margin-bottom: 10px;
+        }
+
+        .close {
+            /* position: absolute; */
+            /* right: 0;
+            top: 0;  */
+            margin-left: 80%;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .close:hover {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #todo_ul li.checked {
+            background: #888;
+            color: #fff;
+            text-decoration: line-through;
+        }
+
+        #todo_ul {
+            margin-left: 30%;
+        }
+
+        #todo_ul li {
+            background-color: bisque;
+            width: 45%;
+            padding: 10px;
+        }
+
+        #todo_ul li:hover {
+            background: #929191;
+            width: 45%;
+        }
+
+        .todo_list {
+            cursor: pointer;
+        }
+
+        #todo_ul li {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .container-fliud {
+            background-color: rgb(247, 205, 234);
+        }
+
+        #country1 {
+            width: 10%;
+        }
+
+        #country2 {
+            width: 10%;
+        }
+
+        /* .loader {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            border-top: 16px solid green;
+            border-right: 16px solid rgb(212, 95, 212);
+            border-bottom: 16px solid rgb(103, 21, 211);
+            border-left: 16px solid rgb(212, 196, 54);
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        } */
+    </style>
+
+</body>
+
+</html>

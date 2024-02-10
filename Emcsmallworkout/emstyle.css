@@ -1,0 +1,402 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: rgb(17, 155, 17);
+    padding: 20px;
+    color: white;
+}
+
+.book-container {
+    width: 25%;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 5%;
+}
+
+.book-container h2 {
+    color: rgb(17, 155, 17);
+}
+
+.book-container button {
+    background-color: rgb(17, 155, 17);
+    color: black;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.add-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 100%;
+    font-size: 50px;
+    background-color: rgb(17, 155, 17);
+    padding: 0px 20px;
+    border: none;
+}
+
+.popup-overlay {
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+}
+
+.popup-box {
+    background-color: rgb(17, 155, 17);
+    border-radius: 20px;
+    width: 40%;
+    padding: 40px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+
+.popup-box input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+}
+
+.popup-box textarea {
+    background: transparent;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+.popup-box ::placeholder {
+    color: white;
+}
+
+.popup-box button {
+    background-color: black;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    color: white;
+    border-radius: 20px;
+}
+
+.popup-box input,
+textarea:focus {
+    outline: none;
+}
+
+/* 
+#wrap {
+    padding: 10%;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 100%;
+} */
+.wholewrap12 button {
+    margin-top: 40%;
+    padding: 10px;
+
+}
+
+#wrap {
+    width: 300px;
+    height: 300px;
+    margin-left: 40%;
+    border-radius: 50%;
+}
+
+
+.container {
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    padding: 10%;
+}
+
+#wrappertime {
+    border: 2px solid white;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding: 0px 2px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+
+}
+
+.container-fliud {
+    background-color: wheat;
+}
+
+#country1 {
+    width: 20%;
+}
+
+#country2 {
+    width: 20%;
+}
+
+.container1 {
+    background-color: rgb(131, 129, 129);
+    padding: 10px;
+}
+
+.stopwatch {
+    background-color: black;
+    color: white;
+    margin: 5% 35%;
+    padding: 50px 0px;
+}
+
+.stopwatch p {
+    font-size: 28px;
+    font-weight: 900;
+    text-shadow: 1px 0px 0px rgb(131, 129, 129),
+        2px 0px 0px rgb(131, 129, 129),
+        3px 0px 0px rgb(131, 129, 129),
+        4px 0px 0px rgb(131, 129, 129),
+        5px 0px 0px rgb(131, 129, 129);
+}
+
+.stopwatch #result span {
+    font-weight: 800;
+    font-size: 30px;
+    text-shadow: 1px 0px 0px rgb(131, 129, 129),
+        2px 0px 0px rgb(131, 129, 129);
+}
+
+.stopwatch #btn7 button {
+    margin: 10px;
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+
+.stopwatch #btn7 button:hover {
+    background-color: rgb(131, 129, 129);
+
+}
+
+.animate {
+    background-color: rgb(247, 208, 159);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.animate div {
+    width: 400px;
+    height: 300px;
+    background-color: rgb(130, 44, 133);
+    margin-top: 10%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    font-size: 30px;
+    text-shadow: 10px 10px 0px rgb(131, 129, 129),
+        10px 10px 0px rgb(131, 129, 129),
+        10px 10px 0px rgb(131, 129, 129);
+    border: 15px solid white;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .3), -20px -20px 20px rgba(0, 0, 0, .3);
+}
+
+.calc {
+    background-color: rgb(195, 231, 231);
+}
+
+.btnwhole {
+
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: 42%;
+}
+
+.btnwhole button {
+    border: 1px solid black;
+    border-radius: 0px;
+}
+
+.btnwhole button:hover {
+    background-color: rgb(52, 143, 143);
+}
+
+.btnwhole button:focus {
+    box-shadow: none;
+}
+
+.calc h5 {
+    padding-top: 20px;
+}
+
+.stoptime {
+    background-color: rgb(238, 202, 245);
+}
+
+.stoptime p {
+    font-size: 40px;
+}
+
+.stoptime #result11 {
+    width: fit-content;
+    margin-left: 42%;
+    padding: 5px 20px;
+    font-size: 30px;
+}
+
+.stoptime #btn11 button {
+    margin: 10px;
+    padding: 0px 10px;
+}
+
+.shown {
+    background-color: rgb(74, 179, 74);
+    width: fit-content;
+    margin-left: 40%;
+    padding: 20px 20px;
+}
+
+.contain {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(238, 245, 242);
+    font-family: sans-serif;
+    outline: none;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator {
+    background-color: rgb(238, 245, 242);
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+                      5px 5px 12px rgba(0, 0, 0, .6);
+    display: grid;
+    grid-template-columns: repeat(4,68px);
+}
+.calculator input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: rgb(238, 245, 242);
+    box-shadow: inset -5px -5px 12px #ffffff,
+                 inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(70, 70, 70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.calculator button{
+    height: 48px;
+    width: 48px;
+    background-color: rgb(238, 245, 242);
+    box-shadow: inset -5px -5px 12px #ffffff,
+                 inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+}
+.calculator .equal{
+    width: 115px;
+    border-radius: 40px;
+    background-color: rgb(238, 245, 242);
+    box-shadow: inset -5px -5px 12px #ffffff,
+                 inset 5px 5px 12px rgba(0, 0, 0, .16);
+}
+
+.Agecontainer{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(152, 168, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Agecontainer1{
+    width: 400px;
+    height: 500px;
+    background-color: rgb(174, 92, 182);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.Agecontainer1 input{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    height: 60px;
+    background-color: white;
+}
+.Agecontainer1 button{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    height: 60px;
+    background-color: white;
+}
+.Agecontainer1 p{
+    color: white;
+    font-size: 20px;
+}
+
+.wholesend{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wholesend form{
+    background-color: rgb(47, 255, 57);
+    padding: 20px 20px;
+    border-radius: 10px;
+}
+.wholesend input,textarea,.mt-3{
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+.wholesend .mt-3{
+    border-radius: 10px;
+}
